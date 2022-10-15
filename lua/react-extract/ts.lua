@@ -79,7 +79,7 @@ local function find_indentifiers_in_expressions(jsx_expressions)
     local row_positions = positions[row] or {}
     table.insert(row_positions, { row = row, col = col })
     positions[row] = row_positions
-    set[ts_utils.get_node_text(identifier, 0)[1]] = true
+    set[vim.treesitter.query.get_node_text(identifier, 0)] = true
   end
 
   local identifiers = {}
