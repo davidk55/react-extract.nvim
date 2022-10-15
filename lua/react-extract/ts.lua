@@ -1,8 +1,12 @@
 local status_ok, ts_utils = pcall(require, "nvim-treesitter.ts_utils")
 if not status_ok then
   return {
-    get_identifiers = function() return {} end,
-    get_original_component_node = function() return nil end
+    get_identifiers = function()
+      return {}
+    end,
+    get_original_component_node = function()
+      return nil
+    end,
   }
 end
 
