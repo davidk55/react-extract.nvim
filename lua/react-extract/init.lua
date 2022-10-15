@@ -285,10 +285,9 @@ end
 M.extract_to_new_file = function()
   local input_opts = {
     prompt = "Enter path to new component: ",
-    completion = "dir",
   }
   vim.ui.input(input_opts, function(filename)
-    return extract_handler(filename, true)
+    return extract_handler("src/components/" .. filename .. ".jsx", true)
   end)
 end
 
