@@ -287,7 +287,7 @@ M.extract_to_new_file = function()
     prompt = "Enter path to new component: ",
   }
   vim.ui.input(input_opts, function(filename)
-    return extract_handler("src/components/" .. filename .. ".jsx", true)
+    return extract_handler("src/components/" .. filename .. ".tsx", true)
   end)
 end
 
